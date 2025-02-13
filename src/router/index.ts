@@ -3,6 +3,8 @@ import { RouteRecordRaw } from 'vue-router';
 import HomePage from '../views/HomePage.vue'
 import RegisterPage from '@/views/login/RegisterPage.vue';
 import ForgotPasswordPage from '@/views/login/ForgotPasswordPage.vue';
+import FeedPage from '@/views/main/FeedPage.vue';
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,9 +22,14 @@ const routes: Array<RouteRecordRaw> = [
     component: RegisterPage
   },
   {
-    path: '/forgot-password',
     name: 'Forgot password',
+    path: '/forgot-password',
     component: ForgotPasswordPage
+  },
+  {
+    name: 'Feed page',
+    path: '/feed-page',
+    component: FeedPage
   }
 ]
 

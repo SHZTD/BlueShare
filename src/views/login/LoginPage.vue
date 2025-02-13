@@ -27,7 +27,9 @@
               <ion-checkbox>Remember me!</ion-checkbox>
             </ion-item>
 
-            <ion-button expand="full">Login</ion-button>
+            <router-link to="/feed-page">
+              <ion-button expand="full">Login</ion-button>
+            </router-link>
 
             <router-link to="/register">
               <ion-button expand="full">Register</ion-button>
@@ -57,4 +59,5 @@
 
 <script setup lang="ts">
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
+import { RouterLink } from 'vue-router';
 </script>
