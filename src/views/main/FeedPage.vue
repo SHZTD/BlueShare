@@ -3,11 +3,8 @@
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
-            <router-link to="">
-                
-            </router-link>
             <ion-button>
-              <ion-icon :icon="arrowBack"></ion-icon>
+                <ion-icon :icon="arrowBack"></ion-icon>
             </ion-button>
           </ion-buttons>
           <ion-searchbar placeholder="Search for any video..."></ion-searchbar>
@@ -19,19 +16,42 @@
         </ion-toolbar>
       </ion-header>
   
-      <ion-content>
+      <ion-content fullscreen>
         <ion-list>
-          <ion-card @click="openVideo('Video1Page.vue')">
-            <ion-img src="/assets/imatge2.png"></ion-img>
+          <ion-card @click="openVideo('Video1Page')">
+            <img src="/src/assets/imatge2.png"></img>
             <ion-card-header>
               <ion-card-title>Mike Tyson VS Evander Holyfield</ion-card-title>
             </ion-card-header>
           </ion-card>
   
-          <ion-card @click="openVideo('khabib')">
-            <ion-img src="/assets/imatge3.png"></ion-img>
+          <ion-card @click="openVideo('video2')">
+            <img src="/src/assets/hq720 1.png"></img>
             <ion-card-header>
-              <ion-card-title>Sparring and Training with Khabib</ion-card-title>
+              <ion-card-title>Sparring and Training with Khabib, full training video.</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+
+          <ion-card @click="openVideo('video3')">
+            <img src="/src/assets/hq720 2.png"></img>
+            <ion-card-header>
+              <ion-card-title>Liquicity yearmix DnB 2016 1 hour</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+
+
+          <ion-card @click="openVideo('video4')">
+            <img src="/src/assets/hq720 3.png"></img>
+            <ion-card-header>
+              <ion-card-title>Khabib wants to fight Connor McGregor in street</ion-card-title>
+              <ion-card-subtitle>Full training video.</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+
+          <ion-card @click="openVideo('video5')">
+            <img src="/src/assets/hq720 4.png"></img>
+            <ion-card-header>
+              <ion-card-title>The Grefg in the everest</ion-card-title>
               <ion-card-subtitle>Full training video.</ion-card-subtitle>
             </ion-card-header>
           </ion-card>
@@ -70,10 +90,23 @@
   const router = useRouter();
   
   const goBack = () => {
-    router.back();
+    router.push('/home');
   };
   
   const openVideo = (id) => {
     router.push(`/video/${id}`);
   };
 </script>
+
+<style lang="css">
+  .content {
+    max-width: 350px;
+    margin: 0 auto; /* Centra horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Si quieres centrar verticalmente, asegúrate de ocupar toda la altura disponible */
+    height: 100%;
+    justify-content: center;
+  }
+</style>

@@ -3,6 +3,7 @@ import { RouteRecordRaw } from 'vue-router';
 import HomePage from '../views/HomePage.vue'
 import RegisterPage from '@/views/login/RegisterPage.vue';
 import ForgotPasswordPage from '@/views/login/ForgotPasswordPage.vue';
+import Video1Page from '@/views/video/Video1Page.vue';
 import FeedPage from '@/views/main/FeedPage.vue';
 
 
@@ -25,6 +26,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Forgot password',
     path: '/forgot-password',
     component: ForgotPasswordPage
+  },
+  {
+    name: 'Video1',
+    path: '/video/Video1Page',
+    component: Video1Page
   },
   {
     name: 'Feed page',

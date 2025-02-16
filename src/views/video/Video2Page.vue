@@ -12,7 +12,7 @@
       </ion-header>
   
       <ion-content>
-        <ion-img src="/assets/tyson-vs-holyfield.jpg"></ion-img>
+        <ion-img src="/src/assets/imatge2.png"></ion-img>
         <ion-card>
           <ion-card-header>
             <ion-card-title>Mike Tyson VS Evander Holyfield</ion-card-title>

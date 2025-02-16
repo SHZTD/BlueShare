@@ -8,7 +8,7 @@
           Please enter your real email registered to receive a link to update your password.
         </p>
   
-        <ion-card>
+        <ion-card class="card">
           <ion-card-content>
             <ion-item>
               <ion-input type="email" placeholder="i_love_jt@fuck.yea"></ion-input>
@@ -31,3 +31,15 @@
 <script setup lang="ts">
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
 </script>
+
+<style lang="css">
+  .card {
+    max-width: 350px;
+    max-height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
