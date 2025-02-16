@@ -1,4 +1,4 @@
-<template>
+  <template>
     <ion-page>
       <ion-header>
         <ion-toolbar>
@@ -69,7 +69,7 @@
     </ion-page>
   </template>
   
-  <script setup>
+<script setup>
   import { useRouter } from 'vue-router';
   import { arrowBack, compassOutline, optionsOutline, videocamOutline, cloudUploadOutline } from 'ionicons/icons';
   
@@ -77,6 +77,5 @@
   
   const goBack = () => {
     router.back();
-  };
-  </script>
-  
+ };
+</script>

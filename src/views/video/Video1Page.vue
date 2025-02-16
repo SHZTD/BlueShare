@@ -79,4 +79,3 @@
     router.back();
   };
   </script>
-  

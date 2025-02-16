@@ -3,11 +3,11 @@
     <ion-header :translucent="true"/>
     <ion-content :fullscreen="true">
         <ion-content>
-          <SearchBar>
+          <LoginPage>
               <!-- 
                 Login page va aqui
               -->
-          </SearchBar>
+          </LoginPage>
         </ion-content>
     </ion-content>
   </ion-page>
