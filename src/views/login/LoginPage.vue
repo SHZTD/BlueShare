@@ -7,7 +7,7 @@
         </div>
 
         <ion-card-header>
-          <ion-card-title class="figma-text-color">Log In</ion-card-title>
+          <ion-card-title class="figma-text-color login-title">Log In</ion-card-title>
         </ion-card-header>
 
         <ion-card-content>
@@ -41,7 +41,7 @@
             <path d="M-4 0.5L402 157V314.5H-4V0.5Z" fill="#00CDCD" fill-opacity="0.58"/>
           </svg>
           <router-link to="/feed-page">
-                <button class="figma-button login">Begin exploring</button>
+            <button class="figma-button login">BEGIN EXPLORING</button>
           </router-link>
         </div>
       </ion-card>
@@ -51,8 +51,7 @@
 </template>
 
 <style lang="css">
-
-  /* muerte */
+  /* whatever */
   
   .card {
     max-width: 350px;
@@ -81,7 +80,7 @@
     top: 63%;
     left: -20%;
     transform: rotate(-7.75deg);
-    background-color: #ffffff00;
+    background-color: #ff000000;
     color: white;
     padding: 100px 153px;
     font-size: 32px;
@@ -107,6 +106,18 @@
     gap: 5%;
   }
 
+  .login-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 auto 10px;
+    border-bottom: 2px solid black;
+    display: block;
+    width: 300px;
+  }
+
   /* fuentes */
 
   @font-face {
@@ -118,7 +129,6 @@
     font-family: Konkhmer_Sleokchher;
     src: url("/src/assets/fonts/Konkhmer_Sleokchher/KonkhmerSleokchher-Regular.ttf");
   }
-
 </style>
 
 <script setup lang="ts">

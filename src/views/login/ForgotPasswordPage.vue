@@ -1,38 +1,45 @@
 <template>
-    <ion-page>
-      <ion-toolbar>
-        <ion-title class="ion-text-left">Forgot your password?</ion-title>
-      </ion-toolbar>
-      <ion-content class="ion-padding">
-        <p>
-          Please enter your real email registered to receive a link to update your password.
-        </p>
-  
-        <ion-card class="card">
-          <ion-card-content>
+  <ion-page>
+    <ion-content class="ion-padding">
+      <ion-card class="card">
+        <div>
+          <p class="center-text">
+            Please enter your real email registered of your account in order to receive a link to update your password.
+          </p>
+        </div>
+
+        <ion-card-title class="figma-text-color register-title"/>
+
+        <ion-card-content>
+          <div class="centered-content">
             <ion-item>
-              <ion-input type="email" placeholder="i_love_jt@fuck.yea"></ion-input>
+              <ion-input label="Email" type="text" placeholder="hello@email.com"></ion-input>
             </ion-item>
-  
+
             <ion-item>
-              <ion-checkbox>It is me legitimately recovering my pass</ion-checkbox>
+              <ion-checkbox>It is me legimately</ion-checkbox>
             </ion-item>
-  
-            <router-link to="/home">
-                <ion-button expand="full">Recover my password</ion-button>
-                <ion-button expand="full">Back</ion-button>
-            </router-link>
-          </ion-card-content>
-        </ion-card>
-      </ion-content>
-    </ion-page>
+          </div>
+        <ion-card-title class="figma-text-color register-title"/>
+        <router-link to="/home">
+          <button class="figma-button">Recover my password</button>
+        </router-link>
+        </ion-card-content>
+        <div class>
+          <svg width="402" height="282" viewBox="0 0 402 282" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 78.1413L418 22V297.344L0 327V78.1413Z" fill="#00CDCD" fill-opacity="0.58"/>
+            <path d="M-4 0.5L402 157V314.5H-4V0.5Z" fill="#00CDCD" fill-opacity="0.58"/>
+          </svg>
+        </div>
+      </ion-card>
+
+    </ion-content>
+  </ion-page>
 </template>
 
-<script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
-</script>
-
 <style lang="css">
+  /* whatever */
+  
   .card {
     max-width: 350px;
     max-height: auto;
@@ -41,5 +48,79 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from 
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: white;
+  }
+
+  .figma-button {
+    background-color: #81b3e1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: KoHo;
+  }
+
+  .figma-button.login {
+    position: absolute;
+    top: 63%;
+    left: -20%;
+    transform: rotate(-7.75deg);
+    background-color: #ff000000;
+    color: white;
+    padding: 100px 153px;
+    font-size: 32px;
+    cursor: pointer;
+    font-family: Konkhmer_Sleokchher;
+  }
+
+  .figma-text-color {
+    color: black;
+  }
+
+  .center-text {
+    display: flex;
+    text-align: center;
+    width: 200px;
+    font-size: 20;
+    font-family: KoHo;
+    color:black;
+  }
+
+  .gap-button {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+    gap: 5%;
+  }
+
+  .register-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 auto 10px;
+    border-bottom: 2px solid black;
+    display: block;
+    width: 300px;
+  }
+
+  /* fuentes */
+
+  @font-face {
+    font-family: KoHo;
+    src: url("/src/assets/fonts/KoHo/KoHo-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: Konkhmer_Sleokchher;
+    src: url("/src/assets/fonts/Konkhmer_Sleokchher/KonkhmerSleokchher-Regular.ttf");
   }
 </style>
+
+<script setup lang="ts">
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
+import { RouterLink } from 'vue-router';
+</script>

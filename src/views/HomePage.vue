@@ -4,9 +4,7 @@
     <ion-content :fullscreen="true">
         <ion-content>
           <LoginPage>
-              <!-- 
-                Login page va aqui
-              -->
+
           </LoginPage>
         </ion-content>
     </ion-content>
@@ -18,7 +16,6 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from 
 
 // main shit
 import LoginPage from './login/LoginPage.vue';
-import SearchBar from './main/SearchBar.vue';
 
 // carga paginas de debug para no ir a verlas todas de golpe
 /*
