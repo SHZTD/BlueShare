@@ -1,40 +1,36 @@
 <template>
   <ion-page>
     <ion-content class="ion-padding">
-      <ion-card class="card">
+      <div class="div-class">
         <div>
           <img src="..//..//..//BLS_Group.png" alt="BLUSHARE" class="logo-blueshare"/>
         </div>
 
-        <ion-card-header>
-          <ion-card-title class="figma-text-color login-title">Log In</ion-card-title>
-        </ion-card-header>
+        <h2 class="figma-text-color login-title">Log In</h2>
 
-        <ion-card-content>
-          <div class="centered-content">
-            <ion-item>
-              <ion-input label="Username" type="text" placeholder="Enter username"></ion-input>
-            </ion-item>
+        <div class="centered-content">
+          <ion-item>
+            <ion-input label="Username" type="text" placeholder="Enter username"></ion-input>
+          </ion-item>
 
-            <ion-item>
-              <ion-input label="Password" type="password" placeholder="Enter password"></ion-input>
-            </ion-item>
+          <ion-item>
+            <ion-input label="Password" type="password" placeholder="Enter password"></ion-input>
+          </ion-item>
 
-            <ion-item>
-              <ion-checkbox>Remember me!</ion-checkbox>
-            </ion-item>
+          <ion-item>
+            <ion-checkbox>Remember me!</ion-checkbox>
+          </ion-item>
 
-            <div class="gap-button">
-              <router-link to="/register">
-                <button class="figma-button">Register</button>
-              </router-link>
-              <router-link to="/forgot-password">
-                <button class="figma-button">Forgot Password</button>
-              </router-link>
-            </div>
+          <div class="gap-button">
+            <router-link to="/register">
+              <button class="figma-button">Register</button>
+            </router-link>
+            <router-link to="/forgot-password">
+              <button class="figma-button">Forgot Password</button>
+            </router-link>
           </div>
+        </div>
 
-        </ion-card-content>
         <div class="wave-container">
           <svg width="402" height="282" viewBox="0 0 402 282" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 78.1413L418 22V297.344L0 327V78.1413Z" fill="#00CDCD" fill-opacity="0.58"/>
@@ -44,17 +40,17 @@
             <button class="figma-button login">BEGIN EXPLORING</button>
           </router-link>
         </div>
-      </ion-card>
-
+      </div>
     </ion-content>
   </ion-page>
 </template>
 
+
 <style lang="css">
   /* whatever */
   
-  .card {
-    max-width: 350px;
+  .div-class {
+    max-width: auto;
     max-height: auto;
     margin: auto;
     display: flex;
@@ -80,8 +76,8 @@
     top: 63%;
     left: -20%;
     transform: rotate(-7.75deg);
-    background-color: #ff000000;
-    color: white;
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
     padding: 100px 153px;
     font-size: 32px;
     cursor: pointer;

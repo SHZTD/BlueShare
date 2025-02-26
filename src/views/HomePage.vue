@@ -3,9 +3,7 @@
     <ion-header :translucent="true"/>
     <ion-content :fullscreen="true">
         <ion-content>
-          <LoginPage>
-
-          </LoginPage>
+          <LoginPage/>
         </ion-content>
     </ion-content>
   </ion-page>
