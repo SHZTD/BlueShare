@@ -33,25 +33,25 @@
           <!-- Video Card 2 -->
           <div class="video-card" @click="navigateToVideo('video2')">
             <img src="@/assets/hq720 1.png" alt="Sparring and Training with Khabib" class="video-thumbnail"/>
-            <div class="video-overlay">
-              <div class="overlay-text">There are a lot of sparring partners of my weight.</div>
-            </div>
             <div class="video-title">Sparring and Training with Khabib , full training video.</div>
           </div>
 
           <!-- Video Card 3 -->
           <div class="video-card" @click="navigateToVideo('video3')">
             <img src="@/assets/hq720 3.png" alt="Khabib Interview" class="video-thumbnail"/>
+            <div class="video-title">Khabib wants to fight Conor McGregor in the streets.</div>
           </div>
 
           <!-- Video Card 4 -->
           <div class="video-card" @click="navigateToVideo('video4')">
             <img src="@/assets/hq720 2.png" alt="Khabib Interview" class="video-thumbnail"/>
+            <div class="video-title">Liquicity 2016 Yearmix music</div>
           </div>
 
           <!-- Video Card 5 -->
           <div class="video-card" @click="navigateToVideo('video5')">
             <img src="@/assets/hq720 4.png" alt="Khabib Interview" class="video-thumbnail"/>
+            <div class="video-title">The Grefg exploring the Everest!</div>
           </div>
         </div>
 

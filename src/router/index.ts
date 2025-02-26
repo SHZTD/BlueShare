@@ -5,6 +5,7 @@ import RegisterPage from '@/views/login/RegisterPage.vue';
 import ForgotPasswordPage from '@/views/login/ForgotPasswordPage.vue';
 import Video1Page from '@/views/video/Video1Page.vue';
 import FeedPage from '@/views/main/FeedPage.vue';
+import SettingsPage1 from '@/views/settings/SettingsPage1.vue';
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -36,6 +37,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Feed page',
     path: '/feed-page',
     component: FeedPage
+  },
+  {
+    name: 'Settings Page',
+    path: '/settings',
+    component: SettingsPage1
   }
 ]
 
