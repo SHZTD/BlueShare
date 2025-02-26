@@ -14,6 +14,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from 
 
 // main shit
 import LoginPage from './login/LoginPage.vue';
+// import UnavailableVideo from './video/UnavailableVideo.vue';
 
 // carga paginas de debug para no ir a verlas todas de golpe
 /*

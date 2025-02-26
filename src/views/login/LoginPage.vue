@@ -77,7 +77,7 @@
   .remember-me {
     --background: transparent;
     --border-width: 0;
-    color: bla;
+    color: black;
     margin-top: 8px;
     margin-bottom: 16px;
   }
