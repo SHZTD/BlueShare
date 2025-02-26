@@ -77,7 +77,7 @@
   .remember-me {
     --background: transparent;
     --border-width: 0;
-    color: black;
+    color: bla;
     margin-top: 8px;
     margin-bottom: 16px;
   }
@@ -173,6 +173,10 @@
 </style>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
+import { IonContent, IonPage } from '@ionic/vue';
 import { RouterLink } from 'vue-router';
+
+// los warnings son porque no puede 
+// encontrar/importar el icono de los campos
+
 </script>

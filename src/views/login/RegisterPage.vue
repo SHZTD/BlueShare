@@ -53,7 +53,9 @@
             <path d="M0 78.1413L418 22V297.344L0 327V78.1413Z" fill="#00CDCD" fill-opacity="0.58"/>
             <path d="M-4 0.5L402 157V314.5H-4V0.5Z" fill="#00CDCD" fill-opacity="0.58"/>
           </svg>
-          <button class="figma-button login">LET'S GO</button>
+          <router-link to="/">
+            <button class="figma-button login">LET'S GO</button>
+          </router-link>
         </div>
       </div>
     </ion-content>
@@ -62,7 +64,7 @@
 
 <script setup lang="ts">
 import { IonContent, IonPage, IonItem, IonInput, IonIcon } from '@ionic/vue';
-import { arrowBack, mailOutline, lockClosedOutline } from 'ionicons/icons';
+import { arrowBack, mailOutline, lockClosedOutline } from 'ionicons/icons'; // oh no
 import { RouterLink } from 'vue-router';
 </script>
 
