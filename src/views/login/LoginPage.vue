@@ -9,15 +9,17 @@
         <h2 class="figma-text-color login-title">Log In</h2>
 
         <div class="centered-content">
-          <ion-item>
-            <ion-input label="Username" type="text" placeholder="Enter username"></ion-input>
+          <ion-item class="custom-input">
+            <ion-icon class="input-icon"></ion-icon>
+            <ion-input label="" type="text" placeholder="Username"></ion-input>
           </ion-item>
 
-          <ion-item>
-            <ion-input label="Password" type="password" placeholder="Enter password"></ion-input>
+          <ion-item class="custom-input">
+            <ion-icon class="input-icon"></ion-icon>
+            <ion-input label="" type="password" placeholder="Password"></ion-input>
           </ion-item>
 
-          <ion-item>
+          <ion-item lines="none" class="remember-me">
             <ion-checkbox>Remember me!</ion-checkbox>
           </ion-item>
 
@@ -47,11 +49,48 @@
 
 
 <style lang="css">
-  /* whatever */
+  /* fuck yes */
   
+  .custom-input {
+    --background: #f1f1f1;
+    --border-radius: 8px;
+    --padding-start: 12px;
+    --padding-end: 12px;
+    margin-bottom: 16px;
+    --border-width: 0;
+    --highlight-height: 0;
+  }
+
+  .custom-input ion-input {
+    --padding-start: 12px;
+    --placeholder-color: #666;
+    --placeholder-opacity: 1;
+    font-family: KoHo;
+  }
+
+  .input-icon {
+    color: #666;
+    margin-right: 8px;
+    font-size: 20px;
+  }
+
+  .remember-me {
+    --background: transparent;
+    --border-width: 0;
+    color: black;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .centered-content {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* pain */
+
   .div-class {
-    max-width: auto;
-    max-height: auto;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -71,12 +110,18 @@
     font-family: KoHo;
   }
 
+  .wave-container {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+  }
+
   .figma-button.login {
     position: absolute;
-    top: 63%;
-    left: -20%;
-    transform: rotate(-7.75deg);
-    background-color: #ff0000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff000000;
     color: rgb(255, 255, 255);
     padding: 100px 153px;
     font-size: 32px;
