@@ -16,10 +16,12 @@
 
         <!-- Search Bar -->
         <div class="search-container">
-          <ion-item class="search-bar">
-            <ion-icon :icon="searchOutline" class="search-icon"></ion-icon>
-            <ion-input placeholder="Search for any video..."></ion-input>
-          </ion-item>
+          <router-link to="/search-video">
+            <ion-item class="search-bar">
+              <ion-icon :icon="searchOutline" class="search-icon"></ion-icon>
+              <ion-input placeholder="Search for any video..."></ion-input>
+            </ion-item>
+          </router-link>
         </div>
 
         <!-- Video Feed -->
@@ -31,26 +33,26 @@
           </div>
 
           <!-- Video Card 2 -->
-          <div class="video-card" @click="navigateToVideo('video2')">
+          <div class="video-card" @click="navigateToVideo('unavailable')">
             <img src="@/assets/hq720 1.png" alt="Sparring and Training with Khabib" class="video-thumbnail"/>
             <div class="video-title">Sparring and Training with Khabib , full training video.</div>
           </div>
 
           <!-- Video Card 3 -->
-          <div class="video-card" @click="navigateToVideo('video3')">
+          <div class="video-card" @click="navigateToVideo('unavailable')">
             <img src="@/assets/hq720 3.png" alt="Khabib Interview" class="video-thumbnail"/>
             <div class="video-title">Khabib wants to fight Conor McGregor in the streets.</div>
           </div>
 
           <!-- Video Card 4 -->
-          <div class="video-card" @click="navigateToVideo('video4')">
-            <img src="@/assets/hq720 2.png" alt="Khabib Interview" class="video-thumbnail"/>
+          <div class="video-card" @click="navigateToVideo('unavailable')">
+            <img src="@/assets/hq720 2.png" alt="Liquicity" class="video-thumbnail"/>
             <div class="video-title">Liquicity 2016 Yearmix music</div>
           </div>
 
           <!-- Video Card 5 -->
-          <div class="video-card" @click="navigateToVideo('video5')">
-            <img src="@/assets/hq720 4.png" alt="Khabib Interview" class="video-thumbnail"/>
+          <div class="video-card" @click="navigateToVideo('unavailable')">
+            <img src="@/assets/hq720 4.png" alt="Grefg" class="video-thumbnail"/>
             <div class="video-title">The Grefg exploring the Everest!</div>
           </div>
         </div>
@@ -96,7 +98,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 const navigateToVideo = (videoId: string) => {
-  router.push(`/video/${videoId}`);
+  router.push(`/${videoId}`);
 };
 </script>
 

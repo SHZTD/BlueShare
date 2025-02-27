@@ -6,9 +6,9 @@
           <!-- Header -->
           <div class="header">
             <div class="logo-container">
-                <div>
-                  <img src="..//..//..//BLS_Group.png" alt="BLUSHARE" class="logo-blueshare"/>
-                </div>
+              <div>
+                <img src="..//..//..//BLS_Group.png" alt="BLUSHARE" class="logo-blueshare"/>
+              </div>
               <div class="subtitle">Settings menu</div>
             </div>
           </div>
@@ -29,9 +29,9 @@
             </ion-item>
             
             <ion-item button>
-            <ion-label>Reset Layout</ion-label>
-          </ion-item>
-          
+              <ion-label>Reset Layout</ion-label>
+            </ion-item>
+            
             <ion-item button>
               <ion-label>Manage Videos</ion-label>
             </ion-item>
@@ -97,10 +97,9 @@ import { ref, onMounted } from 'vue';
 const router = useRouter();
 const contentRef = ref();
 const swipeElement = ref();
-const swipeContent = ref();
 
 const navigateToHelp = () => {
-  router.push('/settings/help');
+  router.push('/help');
 };
 
 onMounted(() => {
@@ -109,26 +108,30 @@ onMounted(() => {
       el: swipeElement.value,
       threshold: 15,
       gestureName: 'swipe-back',
-      onStart: () => {
+      onStart: (detail) => {
+        const target = detail.event.target as HTMLElement;
+        if (target.closest('ion-item, ion-searchbar')) {
+          gesture.enable(false);
+          return;
+        }
         swipeElement.value.style.transition = 'transform 0s';
       },
       onMove: (detail) => {
-        if (detail.deltaX > 0) { // Permitir solo swipe a la derecha
+        if (detail.deltaX > 0 && Math.abs(detail.deltaY) < Math.abs(detail.deltaX)) {
           swipeElement.value.style.transform = `translateX(${detail.deltaX}px)`;
         }
       },
       onEnd: (detail) => {
         swipeElement.value.style.transition = 'transform 0.3s ease-out';
-        if (detail.deltaX > window.innerWidth / 3) {
-          // Si se desliza más de 1/3 del ancho de la pantalla, navegar hacia '/feed'
+        if (detail.deltaX > window.innerWidth / 3 && Math.abs(detail.deltaY) < Math.abs(detail.deltaX)) {
           swipeElement.value.style.transform = `translateX(${window.innerWidth}px)`;
           setTimeout(() => {
             router.back();
           }, 300);
         } else {
-          // Si no, se resetea la posición
           swipeElement.value.style.transform = 'translateX(0)';
         }
+        gesture.enable(true);
       },
     });
     gesture.enable(true);
@@ -143,12 +146,10 @@ onMounted(() => {
   min-height: 100%;
   padding: 20px;
   background-color: white;
-  touch-action: pan-x; /* Permite scroll vertical y swipe horizontal */
 }
 
 .swipe-content {
-  /* Aquí puedes agregar cualquier estilo adicional para el área que maneja el swipe */
-  overflow: hidden; /* Asegura que el swipe no afecte el scroll */
+  overflow: hidden;
 }
 
 .header {
@@ -249,7 +250,6 @@ ion-item::part(native) {
   font-size: 20px;
 }
 
-/* Animación para sugerencia de swipe */
 .swipe-hint {
   animation: swipeHint 1.5s ease-in-out infinite;
 }
@@ -271,5 +271,4 @@ ion-item::part(native) {
   src: url("/src/assets/fonts/KoHo/KoHo-Regular.ttf");
 }
 
-/* Otros estilos... */
 </style>

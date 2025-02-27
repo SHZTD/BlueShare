@@ -10,11 +10,12 @@
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
+import { IonContent, IonHeader, IonPage } from '@ionic/vue';
 
 // main shit
 import LoginPage from './login/LoginPage.vue';
-// import UnavailableVideo from './video/UnavailableVideo.vue';
+import SearchBar from './main/SearchBar.vue';
+// import Video1Page from './video/Video1Page.vue';
 
 // carga paginas de debug para no ir a verlas todas de golpe
 /*

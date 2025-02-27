@@ -4,9 +4,12 @@ import HomePage from '../views/HomePage.vue'
 import RegisterPage from '@/views/login/RegisterPage.vue';
 import ForgotPasswordPage from '@/views/login/ForgotPasswordPage.vue';
 import Video1Page from '@/views/video/Video1Page.vue';
+import Video2Page from '@/views/video/Video2Page.vue';
 import FeedPage from '@/views/main/FeedPage.vue';
 import SettingsPage1 from '@/views/settings/SettingsPage1.vue';
-
+import UnavailableVideo from '@/views/video/UnavailableVideo.vue';
+import SearchBar from '@/views/main/SearchBar.vue';
+import HelpPage1 from '@/views/settings/HelpPage1.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -29,9 +32,14 @@ const routes: Array<RouteRecordRaw> = [
     component: ForgotPasswordPage
   },
   {
-    name: 'Video1',
-    path: '/video/Video1Page',
+    name: 'video1',
+    path: '/video1',
     component: Video1Page
+  },
+  {
+    name: 'video2',
+    path: '/video2',
+    component: Video2Page
   },
   {
     name: 'Feed page',
@@ -39,9 +47,24 @@ const routes: Array<RouteRecordRaw> = [
     component: FeedPage
   },
   {
+    name: 'Unavailable',
+    path: '/unavailable',
+    component: UnavailableVideo
+  },
+  {
+    name: 'SearchVideo',
+    path: '/search-video',
+    component: SearchBar
+  },
+  {
     name: 'Settings Page',
     path: '/settings',
     component: SettingsPage1
+  },
+  {
+    name: 'Help',
+    path: '/help',
+    component: HelpPage1
   }
 ]
 
