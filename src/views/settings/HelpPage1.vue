@@ -38,11 +38,11 @@
             </ion-item>
             
             <ion-item>
-              <ion-label>How to save vid</ion-label>
+              <ion-label>How to save videos</ion-label>
             </ion-item>
             
             <ion-item>
-              <ion-label>How to enter test m...</ion-label>
+              <ion-label>How to enter test mode</ion-label>
             </ion-item>
             
             <ion-item>

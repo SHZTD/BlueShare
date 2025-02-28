@@ -33,7 +33,7 @@
             </ion-item>
             
             <ion-item button @click="navigateToVideoAnalytics">
-              <ion-label>Manage Videos</ion-label>
+              <ion-label>Analytics</ion-label>
             </ion-item>
             
             <ion-item button>
