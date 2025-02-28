@@ -126,7 +126,7 @@
   };
   </script>
   
-  /* its time to go drugs */
+ <!-- drugs -->
   <style scoped>
   .upload-container {
     display: flex;
