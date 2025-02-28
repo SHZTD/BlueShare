@@ -1,11 +1,10 @@
 <template>
-  <!-- full refactor -->
   <ion-page>
     <ion-content class="ion-padding">
       <div class="feed-container">
         <!-- Header -->
         <div class="header">
-          <router-link to="/" class="back-button">
+          <router-link to="/home" class="back-button">
             <ion-icon :icon="arrowBack" size="large"></ion-icon>
             <span>Back</span>
           </router-link>
@@ -33,7 +32,7 @@
           </div>
 
           <!-- Video Card 2 -->
-          <div class="video-card" @click="navigateToVideo('unavailable')">
+          <div class="video-card" @click="navigateToVideo('video2')">
             <img src="@/assets/hq720 1.png" alt="Sparring and Training with Khabib" class="video-thumbnail"/>
             <div class="video-title">Sparring and Training with Khabib , full training video.</div>
           </div>
@@ -104,7 +103,7 @@ const navigateToVideo = (videoId: string) => {
 const navigateTo = (route: string) => {
   switch (route) {
     case 'explore':
-      router.push('/');
+      router.push('/feed-page');
       break;
     case 'settings':
       router.push('/settings');
@@ -190,21 +189,6 @@ const navigateTo = (route: string) => {
   color: black;
 }
 
-.video-overlay {
-  position: absolute;
-  bottom: 40px;
-  left: 0;
-  right: 0;
-  padding: 12px;
-  background: rgba(0,0,0,0.6);
-}
-
-.overlay-text {
-  color: white;
-  font-family: KoHo;
-  font-size: 14px;
-}
-
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -225,6 +209,7 @@ const navigateTo = (route: string) => {
   color: #666;
   font-family: KoHo;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .nav-item.active {

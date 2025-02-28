@@ -3,7 +3,7 @@
       <div class="video-container">
         <!-- Video Player -->
         <div class="video-content">
-          <img src="/src/assets/imatge2.png" alt="Ear bite" class="video-image"/>
+          <img src="/src/assets/imatge1.png" alt="Mike Tyson VS Evander Holyfield" class="video-image"/>
           
           <!-- Video Controls Overlay -->
           <div class="video-controls">

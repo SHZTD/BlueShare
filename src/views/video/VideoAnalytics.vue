@@ -145,7 +145,7 @@
           ],
         },
         options: {
-          indexAxis: 'y', // makes it horizontal
+          indexAxis: 'y',
           responsive: true,
           scales: {
             x: {
