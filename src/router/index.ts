@@ -10,6 +10,8 @@ import SettingsPage1 from '@/views/settings/SettingsPage1.vue';
 import UnavailableVideo from '@/views/video/UnavailableVideo.vue';
 import SearchBar from '@/views/main/SearchBar.vue';
 import HelpPage1 from '@/views/settings/HelpPage1.vue';
+import FullScreen1 from '@/views/video/FullScreen1.vue';
+import VideoAnalytics from '@/views/video/VideoAnalytics.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -60,6 +62,16 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Settings Page',
     path: '/settings',
     component: SettingsPage1
+  },
+  {
+    name: 'Fullscreen',
+    path: '/video1fs',
+    component: FullScreen1
+  },
+  {
+    name: 'Video Analyitics',
+    path: '/video-analytics',
+    component: VideoAnalytics
   },
   {
     name: 'Help',

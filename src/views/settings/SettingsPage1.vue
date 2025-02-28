@@ -32,7 +32,7 @@
               <ion-label>Reset Layout</ion-label>
             </ion-item>
             
-            <ion-item button>
+            <ion-item button @click="navigateToVideoAnalytics">
               <ion-label>Manage Videos</ion-label>
             </ion-item>
             
@@ -100,6 +100,10 @@ const swipeElement = ref();
 
 const navigateToHelp = () => {
   router.push('/help');
+};
+
+const navigateToVideoAnalytics = () => {
+  router.push('/video-analytics');
 };
 
 onMounted(() => {

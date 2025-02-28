@@ -54,10 +54,14 @@
             If you are looking up for actual settings, you should go to the previous window, you will find more specific information than here.
           </div>
 
-          <div class="back-text">
-            BACK<br/>
-            or swipe right
-          </div>
+          <ion-button 
+            expand="block" 
+            fill="clear" 
+            class="back-text"
+            @click=router.back();
+          >
+            Back
+          </ion-button>
         </div>
       </div>
     </ion-content>
@@ -71,10 +75,8 @@ import {
   IonSearchbar,
   IonList,
   IonItem,
-  IonLabel,
-  IonIcon
+  IonLabel
 } from '@ionic/vue';
-import { playCircle, arrowBack } from 'ionicons/icons';
 import { useRouter } from 'vue-router';
 import { ref } from 'vue';
 
@@ -82,9 +84,6 @@ const router = useRouter();
 const contentRef = ref();
 const swipeElement = ref();
 
-const navigateBack = () => {
-  router.go(-1);
-};
 </script>
 
 <style scoped>

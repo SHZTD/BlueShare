@@ -59,19 +59,19 @@
 
         <!-- Bottom Navigation -->
         <div class="bottom-nav">
-          <div class="nav-item active">
+          <div class="nav-item active" @click="navigateTo('explore')">
             <ion-icon :icon="compass"></ion-icon>
             <span>Explore</span>
           </div>
-          <div class="nav-item">
+          <div class="nav-item" @click="navigateTo('settings')">
             <ion-icon :icon="options"></ion-icon>
             <span>Settings</span>
           </div>
-          <div class="nav-item">
+          <div class="nav-item" @click="navigateTo('watch')">
             <ion-icon :icon="tv"></ion-icon>
             <span>Watch</span>
           </div>
-          <div class="nav-item">
+          <div class="nav-item" @click="navigateTo('upload')">
             <ion-icon :icon="cloudUpload"></ion-icon>
             <span>Upload</span>
           </div>
@@ -99,6 +99,25 @@ const router = useRouter();
 
 const navigateToVideo = (videoId: string) => {
   router.push(`/${videoId}`);
+};
+
+const navigateTo = (route: string) => {
+  switch (route) {
+    case 'explore':
+      router.push('/');
+      break;
+    case 'settings':
+      router.push('/settings');
+      break;
+    case 'watch':
+      router.push('/video2');
+      break;
+    case 'upload':
+      router.push('/upload');
+      break;
+    default:
+      console.error('Unknown route:', route);
+  }
 };
 </script>
 

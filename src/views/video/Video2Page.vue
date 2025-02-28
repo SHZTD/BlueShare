@@ -14,9 +14,18 @@
 
     <ion-content>
       <div class="video-container">
-        <!-- Video Thumbnail -->
+        <!-- Video Thumbnail with Maximize Button -->
         <div class="video-thumbnail">
           <ion-img src="/src/assets/imatge2.png" alt="Mike Tyson VS Evander Holyfield"></ion-img>
+          <div class="video-controls">
+            <ion-button 
+              fill="clear" 
+              class="maximize-button"
+              @click="goToFullscreen"
+            >
+              <ion-icon :icon="expand" size="large"></ion-icon>
+            </ion-button>
+          </div>
           <div class="video-title">Mike tyson VS Evander Holyfield</div>
         </div>
 
@@ -63,20 +72,20 @@
     <ion-footer>
       <ion-toolbar>
         <ion-tab-bar>
-          <ion-tab-button @click="goToFeed">
-            <ion-icon :icon="compassOutline"></ion-icon>
+          <ion-tab-button @click="navigateTo('explore')">
+            <ion-icon :icon="compass"></ion-icon>
             <ion-label>Explore</ion-label>
           </ion-tab-button>
-          <ion-tab-button @click="goToSettings">
-            <ion-icon :icon="optionsOutline"></ion-icon>
+          <ion-tab-button @click="navigateTo('settings')">
+            <ion-icon :icon="settings"></ion-icon>
             <ion-label>Settings</ion-label>
           </ion-tab-button>
-          <ion-tab-button>
-            <ion-icon :icon="videocamOutline"></ion-icon>
+          <ion-tab-button @click="navigateTo('watch')">
+            <ion-icon :icon="tv"></ion-icon>
             <ion-label>Watch</ion-label>
           </ion-tab-button>
-          <ion-tab-button>
-            <ion-icon :icon="cloudUploadOutline"></ion-icon>
+          <ion-tab-button @click="navigateTo('upload')">
+            <ion-icon :icon="cloudUpload"></ion-icon>
             <ion-label>Upload</ion-label>
           </ion-tab-button>
         </ion-tab-bar>
@@ -87,7 +96,7 @@
 
 <script setup lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonContent, IonButton, IonButtons, IonIcon, IonSearchbar, IonFooter, IonTabBar, IonTabButton, IonLabel, IonImg } from '@ionic/vue';
-import { arrowBack, compassOutline, optionsOutline, videocamOutline, cloudUploadOutline } from 'ionicons/icons';
+import { arrowBack, settings, compass, tv, cloudUpload, expand } from 'ionicons/icons';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -98,12 +107,24 @@ const goBack = () => {
   router.back();
 };
 
-const goToFeed = () => {
-  router.push('/feed');
+const goToFullscreen = () => {
+  router.push('/video1fs');
 };
 
-const goToSettings = () => {
-  router.push('/settings');
+const navigateTo = (route: string) => {
+  switch (route) {
+    case 'explore':
+      router.push('/feed-page');
+      break;
+    case 'settings':
+      router.push('/settings');
+      break;
+    case 'upload':
+      router.push('/upload');
+      break;
+    default:
+      console.error('Unknown route:', route);
+  }
 };
 
 const toggleFollow = () => {
@@ -112,6 +133,32 @@ const toggleFollow = () => {
 </script>
 
 <style scoped>
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 10;
+}
+
+.maximize-button {
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  --background: rgba(0, 0, 0, 0.5);
+  --border-radius: 50%;
+  margin: 0;
+}
+
+.maximize-button ion-icon {
+  color: white;
+}
+
 .video-container {
   display: flex;
   flex-direction: column;
